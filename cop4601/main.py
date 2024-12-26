@@ -34,7 +34,7 @@ def login_test(driver_path):
     password = input("Enter password: ")
     test.login(url, username, password)
 
-def button_test(driver_path):
+def test_buttons(driver_path):
     test = ButtonTest(driver_path)
     url = f"{base_url}/buttons"
     test.test_buttons(url)
@@ -68,7 +68,7 @@ if __name__ == "__main__":
         3: lambda: delete_user_test(base_url, token),
         4: lambda: update_user_test(base_url, token),
         5: lambda: login_test(driver_path),
-        6: lambda: button_test(driver_path),
+        6: lambda: test_buttons(driver_path),
         7: lambda: delete_all_books_test(base_url, driver_path),
         7: lambda: delete_account_test(base_url, driver_path),
         9: lambda: scenario_test(base_url),
